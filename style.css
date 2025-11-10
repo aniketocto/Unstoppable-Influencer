@@ -1,0 +1,507 @@
+/* === Font Imports === */
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("./fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("./fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("./fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RoundHand";
+  src: url("./fonts/Roundhand Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RoundHand";
+  src: url("./fonts/Roundhand Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Root Variables === */
+:root {
+  /* Fonts */
+  --font-primary: "SFProDisplay", sans-serif;
+  --font-secondary: "RoundHand";
+
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-muted: #e6e6e6;
+  --color-text: #000000;
+  --color-accent: #af0300;
+
+  /* Spacing & radius */
+  --heading-size: 48px;
+  --spacing: 1rem;
+}
+
+h1 {
+  font-size: var(--heading-size);
+  font-weight: 700;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  margin: 0 0 -5px 0;
+}
+
+.accent {
+  color: var(--color-accent);
+  font-size: calc(var(--heading-size) + 12px);
+  font-weight: 700;
+  font-family: var(--font-secondary);
+  display: inline-block;
+  padding-left: 5px;
+}
+
+body {
+  width: 1220px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--color-bg);
+  font-family: var(--font-primary);
+  color: var(--color-text);
+}
+
+section.upper-section {
+  background-image: url("./images/background_img_top.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px 0;
+
+  overflow: hidden;
+}
+
+section.lower-section {
+  background-image: url("./images/background_img_bottom.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+img.logo {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+p.subheading {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  margin: 0 0 0 0;
+}
+
+div.main_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+div.container.left {
+  width: 50%;
+  max-width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+div.container.left h2 {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  margin: 15px 0 0 0;
+  width: 70%;
+}
+
+div.container.left div.list_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-gap: 15px; */
+  margin: 35px 0 0 0;
+}
+
+div.container.left div.list_container div {
+  width: 90%;
+  background-color: var(--color-muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin: 0 0 20px;
+  border-radius: 10px;
+
+  img.icon {
+    width: 64px;
+  }
+  img {
+    width: 42px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 14px;
+  }
+
+  p {
+    width: 65%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    margin: 0 0 0 0;
+  }
+}
+
+div.container.right {
+  width: 50%;
+  max-width: 100%;
+  height: 100%c;
+  background: var(--color-bg);
+  box-shadow: 5px 10px 30px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 30px;
+  padding: 40px 50px;
+}
+
+div.container.right h2 {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  width: 85%;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 35px;
+}
+
+div.input_container {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  width: 100%;
+}
+
+div.input_group {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 50%;
+}
+.single {
+  width: 100% !important;
+}
+label {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  margin: 0;
+  line-height: normal;
+}
+
+input,
+select {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  background: #fff;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  padding: 0 10px;
+}
+
+div.button_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: var(--color-accent);
+  border: 0;
+
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  color: var(--color-bg);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+span {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  margin: 0;
+  line-height: normal;
+  text-align: center;
+}
+
+span a {
+  color: var(--color-text);
+}
+
+/* --------- Responsive -------- */
+
+@media screen and (max-width: 1050px) {
+  :root {
+    --heading-size: 40px;
+  }
+  section.upper-section {
+    padding: 0 30px 0;
+  }
+  p.subheading {
+    font-size: 25px;
+  }
+  div.container.left h2 {
+    width: 80%;
+    font-size: 22px;
+  }
+  div.container.right {
+    width: 45%;
+    padding: 40px 30px;
+  }
+  div.container.right h2 {
+    font-size: 24px;
+  }
+  form {
+    gap: 25px;
+  }
+  label {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --heading-size: 35px;
+  }
+  p.subheading {
+    font-size: 22px;
+  }
+  div.container.left h2 {
+    width: 100%;
+    font-size: 20px;
+  }
+  div.container.right {
+    padding: 30px;
+  }
+  div.container.right h2 {
+    width: 100%;
+    font-size: 20px;
+  }
+  div.input_container {
+    flex-direction: column;
+  }
+  div.input_group {
+    width: 100%;
+  }
+  div.button_container {
+    gap: 5px;
+  }
+  span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --heading-size: 26px;
+  }
+  header {
+    padding-bottom: 30px;
+  }
+  img.logo {
+    width: 70%;
+  }
+  p.subheading {
+    font-size: 20px;
+  }
+  div.main_container {
+    flex-direction: column;
+  }
+  div.container.left {
+    width: 100%;
+    align-items: center;
+    background: none;
+  }
+  div.container.left h2 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  div.container.left div.list_container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 10px;
+  }
+  div.container.left div.list_container div {
+    width: 100%;
+    img {
+      width: 40px;
+      margin-bottom: 8px;
+    }
+    p {
+      width: 90%;
+      font-size: 16px;
+    }
+  }
+  div.container.right {
+    width: 100%;
+    padding: 20px 0;
+  }
+  div.container.right h2 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  form {
+    padding: 10px 20px;
+    gap: 20px;
+  }
+  button {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --heading-size: 20px;
+  }
+  img.logo {
+    width: 100%;
+  }
+  p.subheading {
+    font-size: 16px;
+  }
+  div.container.left h2 {
+    font-size: 18px;
+  }
+  div.container.right {
+    gap: 20px;
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  :root {
+    --heading-size: 18px;
+  }
+  section.upper-section {
+    padding: 0px 20px 0;
+  }
+  p.subheading {
+    font-size: 14px;
+  }
+
+  div.container.left div.list_container div {
+    margin: 0;
+    img {
+      width: 36px;
+      margin-bottom: 8px;
+    }
+    img.icon {
+      width: 50px;
+    }
+  }
+  div.container.right {
+    margin-top: 30px;
+  }
+  div.container.right h2 {
+    width: 98%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+  }
+  label {
+    font-size: 14px;
+  }
+  div.input_container {
+    gap: 15px;
+  }
+  div.input_group {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  :root {
+    --heading-size: 24px;
+  }
+  h1 {
+    text-align: center;
+    line-height: 0.5;
+  }
+  p.subheading {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  div.container.left div.list_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
