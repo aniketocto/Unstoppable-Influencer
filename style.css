@@ -405,27 +405,19 @@ span a {
   width: 100%;
   padding: 40px 0 !important;
   margin-top: 50px;
-  overflow: visible;
 }
-
 .swiper-slide {
-  flex: 0 0 80%; /* show 1 full + a peek of next */
-  max-width: 80%;
+  width: fit-content;
   transition: transform 0.3s ease;
-  box-sizing: border-box;
+  margin: 0 10px;
 }
-
-/* optional: enlarge active slide */
 .swiper-slide-active {
-  transform: scale(1.05);
-  z-index: 2;
+  transform: scale(1.05) !important;
 }
-
-/* prevent too small shrink on side slides */
 .swiper-slide-prev,
 .swiper-slide-next {
-  transform: scale(0.9);
-  opacity: 0.9;
+  transform: scale(0.7) !important;
+  opacity: 0.8 !important;
 }
 
 div.footer {
@@ -618,17 +610,20 @@ div.footer p {
     font-size: 14px;
   }
   .swiper {
-    padding: 20px 0 50px !important;
+    padding: 20px 0 50px;
   }
   div.footer {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
 
   div.footer p {
     font-size: 14px;
     text-align: center;
+  }
+  .card {
+    width: 75%;
+    height: auto;
   }
 }
 
@@ -671,6 +666,10 @@ div.footer p {
   div.input_group {
     gap: 10px;
   }
+  .card {
+    width: 70%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -688,5 +687,9 @@ div.footer p {
   }
   div.container.left div.list_container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    width: 55%;
+    height: auto;
   }
 }

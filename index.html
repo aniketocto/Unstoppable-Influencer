@@ -41,7 +41,7 @@
           <div class="list_container">
             <div>
               <img
-                src="./images/creative_direction.svg"
+                src="/images/creative_direction.svg"
                 alt="Creative Direction"
                 class="icon"
               />
@@ -433,29 +433,7 @@ Shoot Supervision"
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script>
-            document.addEventListener("DOMContentLoaded", function () {
-        const swiper = new Swiper(".mySwiper", {
-          lidesPerView: "auto", // lets CSS control exact width
-          spaceBetween: 12,
-          centeredSlides: true,
-          grabCursor: true,
-          loop: true,
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-          },
-          breakpoints: {
-            0: {
-              slidesPerView: "auto", // still auto; CSS handles width
-              spaceBetween: 10,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-          },
-        });
-      });
+      document.addEventListener("DOMContentLoaded", function () { const swiper = new Swiper(".mySwiper", { slidesPerView: 2, spaceBetween: 10, centeredSlides: true, grab: true, loop: true, autoplay: { delay: 1000, disableOnInteraction: false, }, breakpoints: { 0: { slidesPerView: 1, spaceBetween: 0, }, 1024: { slidesPerView: 2, spaceBetween: 20, }, }, }); });
     </script>
 
     <script src="script.js"></script>
