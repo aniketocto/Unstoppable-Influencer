@@ -62,6 +62,7 @@ h1 {
   font-family: var(--font-primary);
   color: var(--color-text);
   margin: 0 0 -5px 0;
+  text-align: center;
 }
 
 .accent {
@@ -103,6 +104,9 @@ section.lower-section {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
 }
 
 header {
@@ -200,7 +204,7 @@ div.container.left div.list_container div {
 div.container.right {
   width: 50%;
   max-width: 100%;
-  height: 100%c;
+  height: 100%;
   background: var(--color-bg);
   box-shadow: 5px 10px 30px 0 rgba(0, 0, 0, 0.25);
   border-radius: 13px;
@@ -305,6 +309,142 @@ span a {
   color: var(--color-text);
 }
 
+.logos {
+  overflow: hidden;
+  padding: 60px 0 100px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  /* animation-play-state: paused; */
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.card {
+  width: 550px;
+  height: 200px;
+  background: var(--color-bg);
+  box-shadow: 5px 10px 30px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+
+  padding: 30px 40px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.card-header img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.card-header div p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  margin: 0;
+  line-height: normal;
+}
+
+.card-body p {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  margin: 0;
+  line-height: normal;
+}
+
+.swiper {
+  width: 100%;
+  padding: 40px 0 !important;
+  margin-top: 50px;
+  overflow: visible;
+}
+
+.swiper-slide {
+  flex: 0 0 80%; /* show 1 full + a peek of next */
+  max-width: 80%;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* optional: enlarge active slide */
+.swiper-slide-active {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* prevent too small shrink on side slides */
+.swiper-slide-prev,
+.swiper-slide-next {
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+
+div.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: #e6e6e6;
+}
+
+div.footer p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  margin: 0;
+  line-height: normal;
+}
+
 /* --------- Responsive -------- */
 
 @media screen and (max-width: 1050px) {
@@ -333,6 +473,22 @@ span a {
   }
   label {
     font-size: 16px;
+  }
+  .card {
+    width: 90%;
+    height: auto;
+  }
+  .swiper-slide {
+    flex: 0 0 95%;
+    max-width: 95%;
+  }
+  .swiper-slide-active {
+    transform: none;
+    opacity: 1;
+  }
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    opacity: 0.5;
   }
 }
 
@@ -381,6 +537,9 @@ span a {
   p.subheading {
     font-size: 20px;
   }
+  section.upper-section {
+    padding: 0 20px 60px;
+  }
   div.main_container {
     flex-direction: column;
   }
@@ -424,7 +583,7 @@ span a {
     gap: 20px;
   }
   button {
-    width: 90%;
+    /* width: 90%; */
   }
 }
 
@@ -444,6 +603,32 @@ span a {
   div.container.right {
     gap: 20px;
     padding: 30px 0;
+  }
+  .card-header {
+    /* flex-direction: column; */
+    gap: 5px;
+  }
+  .card-header div p {
+    font-size: 12px;
+  }
+  .card-header img {
+    width: 100px;
+  }
+  .card-body p {
+    font-size: 14px;
+  }
+  .swiper {
+    padding: 20px 0 50px !important;
+  }
+  div.footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  div.footer p {
+    font-size: 14px;
+    text-align: center;
   }
 }
 

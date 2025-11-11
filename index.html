@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unstoppable Influencer</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- include Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body>
     <!-- Upper Section -->
@@ -99,7 +109,7 @@ Shoot Supervision"
         </div>
         <div class="container right">
           <h2>Step up your Visibility Game with Influencer Campaign</h2>
-          <form>
+          <form id="briefForm" method="post">
             <div class="input_container">
               <div class="input_group">
                 <label for="name">Name<sup>*</sup></label>
@@ -181,8 +191,10 @@ Shoot Supervision"
             </div>
             <div class="input_container">
               <div class="input_group">
-                <label for="objective">Type of Influencer<sup>*</sup></label>
-                <select name="objective" id="objective">
+                <label for="influencer_type"
+                  >Type of Influencer<sup>*</sup></label
+                >
+                <select name="influencer_type" id="influencer_type">
                   <option value="" disabled selected>Select an option</option>
                   <option value="Nano">Nano</option>
                   <option value="Micro">Micro</option>
@@ -201,11 +213,10 @@ Shoot Supervision"
                 </select>
               </div>
             </div>
+            <button type="submit">Submit</button>
           </form>
 
           <div class="button_container">
-            <button type="submit">Submit</button>
-
             <span>
               Have Questions?
               <a href="#">Talk to an Expert</a>
@@ -216,7 +227,236 @@ Shoot Supervision"
     </section>
 
     <!-- Lower Section -->
-    <section class="lower-section"></section>
+    <section class="lower-section">
+      <h1 class="heading">Tr<span class="accent">us</span>ted By Business</h1>
+      <div class="logos">
+        <div class="logos-slide">
+          <img src="/images/logo1.png" />
+          <img src="/images/logo2.png" />
+          <img src="/images/logo3.png" />
+          <img src="/images/logo4.png" />
+          <img src="/images/logo5.png" />
+          <img src="/images/logo6.png" />
+          <img src="/images/logo7.png" />
+        </div>
+      </div>
+
+      <h1 class="heading">
+        Words for the Un<span class="accent">stop</span>pable
+      </h1>
+
+      <!-- Testimonials -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="/images/logo4.png" alt="Nirvana Realty" />
+                <div>
+                  <p class="name">Punit Agarwal</p>
+                  <p class="role">CEO &amp; MD</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Unstoppable is amazing at influencer marketing! They really
+                  get how to connect brands with the right influencers and
+                  create campaigns that actually deliver results. Super smooth
+                  process, creative ideas, and great communication throughout.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Terms of Service | Privacy Policy</p>
+        <p>
+          &copy; 2025, Unstoppable Creative Agency. Ltd. All Rights Reserved
+        </p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".mySwiper", {
+          lidesPerView: "auto", // lets CSS control exact width
+          spaceBetween: 12,
+          centeredSlides: true,
+          grabCursor: true,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: "auto", // still auto; CSS handles width
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          },
+        });
+      });
+    </script>
 
     <script src="script.js"></script>
   </body>
