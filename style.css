@@ -131,6 +131,7 @@ p.subheading {
   font-family: var(--font-primary);
   color: var(--color-text);
   margin: 0 0 0 0;
+  text-align: center;
 }
 
 div.main_container {
@@ -314,26 +315,7 @@ span a {
   padding: 60px 0 100px;
   white-space: nowrap;
   position: relative;
-}
-
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 150px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
-
-.logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  text-align: center;
 }
 
 .logos:hover .logos-slide {
@@ -341,13 +323,17 @@ span a {
 }
 
 .logos-slide {
-  display: inline-block;
-  animation: 35s slide infinite linear;
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* animation: 35s slide infinite linear; */
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
 
 .logos-slide img {
   height: 50px;
-  margin: 0 40px;
+  /* margin: 0 15px; */
 }
 
 @keyframes slide {
@@ -518,7 +504,7 @@ div.footer p {
 
 @media screen and (max-width: 600px) {
   :root {
-    --heading-size: 26px;
+    --heading-size: 35px;
   }
   header {
     padding-bottom: 30px;
@@ -581,13 +567,16 @@ div.footer p {
 
 @media screen and (max-width: 500px) {
   :root {
-    --heading-size: 20px;
+    --heading-size: 35px;
+  }
+  h1  {
+    line-height: 0.8;
   }
   img.logo {
     width: 100%;
   }
   p.subheading {
-    font-size: 16px;
+    margin-top: 10px;
   }
   div.container.left h2 {
     font-size: 18px;
@@ -625,17 +614,18 @@ div.footer p {
     width: 75%;
     height: auto;
   }
+  .logos-slide {
+    gap: 50px;
+  }
 }
 
 @media screen and (max-width: 380px) {
-  :root {
-    --heading-size: 18px;
-  }
+  
   section.upper-section {
     padding: 0px 20px 0;
   }
   p.subheading {
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 
   div.container.left div.list_container div {
